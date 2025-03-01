@@ -1,67 +1,49 @@
-const repoOwner = "icodeweb";
-const repoName = "Layers-Blog";
-const branch = "main";
-const articlesPath = "articles";
+let useGitAPI = false;
 
 async function loadArticles() {
     const articlesContainer = document.getElementById("articles");
+    const articleFiles = useGitAPI ? await fetchFromGitHub() : generateLocalArticlePaths(50);
+
+    for (const file of articleFiles) {
+        try {
+            const response = await fetch(file.url);
+            if (!response.ok) {
+                console.warn(`File not found: ${file.url}`);
+                break;
+            }
+            const markdown = await response.text();
+            const articleElement = document.createElement("div");
+            articleElement.classList.add("article");
+            articleElement.innerHTML = marked.parse(markdown);
+            articlesContainer.appendChild(articleElement);
+        } catch (error) {
+            console.error("Error loading article:", error);
+        }
+    }
+}
+
+async function fetchFromGitHub() {
+    const repoOwner = "icodeweb";
+    const repoName = "Layers-Blog";
+    const branch = "main";
+    const articlesPath = "articles";
 
     try {
         const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${articlesPath}?ref=${branch}`);
         const files = await response.json();
-        const markdownFiles = files.filter(file => file.name.endsWith(".md"));
-
-        for (const file of markdownFiles) {
-            const fileResponse = await fetch(file.download_url);
-            const markdown = await fileResponse.text();
-            const htmlContent = markdownToHTML(markdown);
-            const articleElement = document.createElement("div");
-            articleElement.classList.add("article");
-            articleElement.innerHTML = htmlContent;
-            articlesContainer.appendChild(articleElement);
-        }
+        return files.filter(file => file.name.endsWith(".md")).map(file => ({ url: file.download_url }));
     } catch (error) {
-        console.error("Error loading articles:", error);
+        console.error("Error fetching from GitHub:", error);
+        return [];
     }
 }
 
-function markdownToHTML(markdown) {
-    return markdown
-        .replace(/^# (.*$)/gm, "<h2>$1</h2>")
-        .replace(/^!\[(.*?)\]\((.*?)\)/gm, '<img src="$2" alt="$1">')
-        .replace(/\n/g, "<br>");
+function generateLocalArticlePaths(maxCount) {
+    const existingFiles = [];
+    for (let i = 1; i <= maxCount; i++) {
+        const filePath = `articles/article${i}.md`;
+        existingFiles.push({ url: filePath });
+    }
+    return existingFiles;
 }
-
-
 window.onload = loadArticles;
-
-
-
-
-
-// async function loadArticles() {
-//     const articlesContainer = document.getElementById("articles");
-//     const articleFiles = [];
-
-//     for (let articleIndex = 1; articleIndex <= 50; articleIndex++) {
-//         let articleFileName = `article${articleIndex}.md`
-//         articleFiles.push(articleFileName)
-//     }
-
-//     for (const file of articleFiles) {
-//         const response = await fetch(`articles/${file}`);
-//         const markdown = await response.text();
-
-//         if (!response.ok) {
-//             break
-//         } else {
-//             const htmlContent = markdownToHTML(markdown);
-//             const articleElement = document.createElement("div");
-//             articleElement.classList.add("article");
-//             articleElement.innerHTML = htmlContent;
-//             articlesContainer.appendChild(articleElement);
-//         }
-//     }
-// }
-
-
