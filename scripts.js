@@ -46,4 +46,6 @@ function generateLocalArticlePaths(maxCount) {
     }
     return existingFiles;
 }
+
 window.onload = loadArticles;
+

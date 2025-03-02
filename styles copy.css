@@ -12,16 +12,17 @@
 
 #page {
     display: flex;
-    flex-direction: column;
     height: 100vh;
 }
 
 #leftBar {
+    width: var(--leftBarWidth);
     background-color: blue;
     color: white;
-    display: grid;
-    grid-template-columns: 10% 70% 10%;
-    padding: 1rem 10rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
     gap: 3rem;
 }
 
@@ -33,21 +34,21 @@
     font-size: 20px;
     text-transform: uppercase;
     font-style: italic;
-    text-align: center;
-    text-decoration: none;
-    color: white;
 }
 
 
 #articles {
+    width: calc(100% - var(--leftBarWidth));
     display: flex;
-    width: 70%;
-    margin: auto;
     flex-direction: column;
+    /* Arrange articles vertically */
     overflow-y: auto;
+    /* Enable vertical scrolling */
+    height: 100vh;
 }
 
 .article {
+    width: 100%;
     padding: 5rem 10rem;
     box-sizing: border-box;
     border-bottom: 1px solid #ddd;
@@ -63,9 +64,8 @@
 
 img {
     padding: 1rem 0px;
-    display: inline;
-    width: 50%;
-    /* margin: auto; */
+    width: 80%;
+    margin: auto;
 }
 
 p {

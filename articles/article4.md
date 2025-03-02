@@ -7,4 +7,3 @@ Lately, I've been thinking about how consistency shapes growth. It’s not about
 
 Sometimes, it’s hard to see progress when you’re in the middle of it. I’ve been looking back at older projects and notes, and it’s wild how much perspective changes with time. Small wins, daily habits, and a bit of patience—this is the recipe I’m trying to stick to.
 
----

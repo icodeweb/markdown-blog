@@ -7,5 +7,3 @@ I'm working on a new project that blends art, electronics, and wearable accessor
 
 ![img](/assets/2.jpg)
 
-
----
