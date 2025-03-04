@@ -1,3 +1,4 @@
+
 let useGitAPI = false;
 
 async function loadArticles() {
@@ -15,7 +16,7 @@ async function loadArticles() {
             const articleElement = document.createElement("div");
             articleElement.classList.add("article");
             articleElement.innerHTML = marked.parse(markdown);
-            articlesContainer.appendChild(articleElement);
+            articlesContainer.prepend(articleElement);
         } catch (error) {
             console.error("Error loading article:", error);
         }
