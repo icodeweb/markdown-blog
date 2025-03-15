@@ -1,9 +1,8 @@
 
-# Post 2: An Idea in Progress
+# A Thought on Consistency
 
-### February 28, 2025
+### February 26, 2025
 
-I'm working on a new project that blends art, electronics, and wearable accessories. It feels exciting and daunting at the same time. There’s something about the mix of creativity and tech that just clicks for me. I’ve been sketching out ideas and experimenting with different components. The goal is to create something that not only looks good but also adds a unique layer of interaction.
+Lately, I've been thinking about how consistency shapes growth. It’s not about huge leaps forward but the small, steady steps. Whether it's coding, art, or just life—showing up matters. The more I stick to my routines, the more I notice subtle changes. It’s like planting seeds—nothing happens overnight, but with time, things start to grow.
 
-![img](/assets/2.jpg)
-
+Sometimes, it’s hard to see progress when you’re in the middle of it. I’ve been looking back at older projects and notes, and it’s wild how much perspective changes with time. Small wins, daily habits, and a bit of patience—this is the recipe I’m trying to stick to.

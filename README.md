@@ -1,8 +1,10 @@
 # Markdown-Based Blog
 
-This project is a JavaScript-powered markdown blog that dynamically loads and displays markdown articles. Articles can be fetched from a GitHub repository or a local directory. uses `marked` library to convert markdown content into HTML
+## Overview
 
-### Features
+This project is a JavaScript-powered markdown blog that dynamically loads and displays markdown articles. Articles can be fetched from a GitHub repository or a local directory. uses `marked` library to convert markdown content into HTML.
+
+## Features
 
 - Fetch and display markdown articles.
 - Load content from a GitHub repository or a local folder.
@@ -30,7 +32,7 @@ If using the GitHub API, these settings determine where the blog pulls content f
 - `useGitAPI=true` → Fetch from GitHub.
 - `maxArticles=100` → Set the number of local markdown files to load.
 
-### Dependencies
+## Dependencies
 
 - `marked.js` (for parsing markdown)
 - GitHub API (if using remote fetching)

@@ -1,7 +1,10 @@
 
-# Post 3: Cool Find: Minimalist Tools
+# Cossslors and Sounds
 
-### February 27, 2025
+### February 25, 2025
 
-Stumbled upon this amazing open-source tool today. It's sleek, efficient, and completely free. It's refreshing to see creators building with such care and intention. Definitely adding this to my toolkit. I’m thinking about writing a longer post diving into how it can streamline certain tasks—there’s a lot of potential here.
+Spent the afternoon exploring the city. The blend of colors, the hum of life—it's like every street has its own story. Sometimes inspiration strikes when you least expect it. I found a small art gallery tucked away from the main road. The artwork felt raw and genuine, and it sparked something in me. I’m considering doing a series of posts about the hidden gems I come across—there’s so much beauty in the everyday if you look closely enough.
 
+![img](https://placehold.co/600x400)
+
+Spent the afternoon exploring the city. The blend of colors, the hum of life—it's like every street has its own story. Sometimes inspiration strikes when you least expect it. I found a small art gallery tucked away from the main road. The artwork felt raw and genuine, and it sparked something in me. I’m considering doing a series of posts about the hidden gems I come across—there’s so much beauty in the everyday if you look closely enough.
